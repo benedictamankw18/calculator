@@ -1,0 +1,332 @@
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+body{
+    background-color: #333;
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #FFF;
+}
+:root{
+    --mainColor : #ff9a62;
+    --secondColor: #868080;
+    --thirdColor: #a5a4a4;
+    --fourthColor: #ffffff;
+    --fontsize : 16px;
+}
+
+.main-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255);
+    width: 500px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    box-shadow: 20px 20px 30px 2px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+    background-color: #cfcdcd;
+}
+
+.top-fleid{
+    width: 100%;
+    padding: 0px 0px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-color: #b3b2b2;
+    border-radius: 20px 20px 0px 0px;
+}
+.switch{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    top: 5px;
+    left: 5px;
+    position: absolute;
+}
+
+.switch-mode {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+/* Hide default HTML checkbox */
+.switch-mode input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border: 1px solid #9b9999;
+    border-radius: 40px;
+
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 2.5px;
+    background-image: url('https://img.icons8.com/ios-filled/50/000000/sun.png');
+    background-size: 16px 16px;
+    background-color: var(--mainColor);
+    border-radius: 40px;
+    transition: .4s;
+}
+
+.switch-mode input:checked+.slider:before {
+    background-color: var(--thirdColor);
+    background-image: url('https://img.icons8.com/ios-filled/50/000000/moon.png');
+}
+
+.switch-mode input:checked+.slider {
+    background-color: var(--mainColor);
+}
+
+.switch-mode input:focus+.slider {
+    box-shadow: 0 0 1px var(--mainColor);
+}
+
+.switch-mode input:checked+.slider:before {
+    transform: translateX(16px);
+}
+
+.input{
+    width: 100%;
+    height: 90px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.input input{
+    width: 95%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 68px;
+    text-align: right;
+    background-color: transparent;
+    cursor: default;
+}
+
+.input input:invalid{
+    color: red;
+}
+.input input::placeholder{
+    color: #999;
+}
+
+.history input::placeholder {
+    color: #c2bdbd;
+}
+.history{
+    width: 96%;
+    height: 20px;
+    padding: 10px;
+    margin: 0px 0;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 24px;
+    background-color:#868080;
+    border: none;
+}
+
+.history input{
+    width: 100%;
+    margin-left: 10px;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    text-align: right;
+    background-color: transparent;
+    cursor: default;
+    color: #c2bdbd;
+}
+#histry{
+    color: #ff9a62;
+}
+
+.button-fleid{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: transparent;
+}
+
+.row1, .row2, .row3, .row4{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+.row5{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.row1 button, .row2 button, .row3 button, .row4 button, .row5 button{
+    width: 100px;
+    height: 50px;
+    color: #ff9a62;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: var(--thirdColor);
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px var(--thirdColor);
+}
+#num, #dot{
+    color: var(--thirdColor);
+}
+#equal{
+    width: 220px;
+    height: 50px;
+    color: #ffffff;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9a62;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px var(--thirdColor);
+}
+
+#subtract, #add, #multiply, #divide, #backspace{
+    color: #ff9a62;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+#backspace{
+    font-size: 30px;
+}
+
+#clear,
+#percentage{
+    color: #ff9a62;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+button:hover{
+    background-color: #fff9f7;
+}
+
+#equal:hover{
+    background-color: #ff7b3d;
+}
+
+#equal:active {
+    background-color: #71503f;
+    color: #ffffff;
+}
+
+button:active{
+    background-color: #71503f;
+    color: #ffffff;
+}

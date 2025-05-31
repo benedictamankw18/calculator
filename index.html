@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="calcus.jpeg" type="image/x-icon">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="main-block">
+        <div class="top-fleid">
+            <div class="switch">
+                <label class="switch-mode">
+                    <input type="checkbox" onchange="setModeColor()">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="input">
+                <input type="text" name="number" id="number" placeholder="0" pattern="\d+" readonly>
+            </div>
+        </div>
+        <div class="history">
+            <input type="text" name="history" id="history" placeholder="0" pattern="\d+" readonly>
+        </div>
+        <div class="button-fleid">
+            <div class="row1">
+                <button class="symbol" id="clear" onclick="cls()">AC</button>
+                <button class="symbol" id="backspace" onclick="del()">⌫</button>
+                <button class="symbol" id="percentage">%</button>
+                <button class="symbol" id="divide" onclick="appendSymbol('÷')">÷</button>
+            </div>
+            <div class="row2">
+                <button class="num" onclick="appendNumber(7)">7</button>
+                <button class="num" onclick="appendNumber(8)" >8</button>
+                <button class="num" onclick="appendNumber(9)">9</button>
+                <button class="symbol" id="multiply" onclick="appendSymbol('×')">×</button>
+            </div>
+            <div class="row3">
+                <button class="num" onclick="appendNumber(4)">4</button>
+                <button class="num" onclick="appendNumber(5)">5</button>
+                <button class="num" onclick="appendNumber(6)">6</button>
+                <button class="symbol" id="subtract" onclick="appendSymbol('−')">−</button>
+            </div>
+            <div class="row4">
+                <button class="num" onclick="appendNumber(1)">1</button>
+                <button class="num" onclick="appendNumber(2)">2</button>
+                <button class="num" onclick="appendNumber(3)">3</button>
+                <button class="symbol" id="add" onclick="appendSymbol('+')">+</button>
+            </div>
+            <div class="row5">
+                <button class="num" onclick="appendNumber(0)">0</button>
+                <button class="symbol" id="dot" onclick="appendNumber('.')">&#183</button>
+                <button id="equal" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+<script src="display.js"></script>
+</html>
